@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "  i",
+    "ifi",
+    "ic "
+  ],
+  "key":
+  {
+    "i":
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    "c":
+    {
+      "item": "sophosquest:earth_crystal"
+    },
+    "f":
+    {
+      "item": "sophosquest:fossil"
+    }
+  },
+  "result":
+  {
+    "item": "sophosquest:petrified_blade",
+    "count": 1
+  }
+}

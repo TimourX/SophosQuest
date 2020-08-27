@@ -1,0 +1,25 @@
+{
+  "item.sophosquest.earth_crystal": "Earth Crystal",
+  "item.sophosquest.fossil": "Fossil",
+  "item.sophosquest.petrified_blade": "Petrified Blade",
+  "item.sophosquest.earth_crystal_sword": "Earth Crystal Sword",
+  "item.sophosquest.earth_crystal_pickaxe": "Earth Crystal Pickaxe",
+  "item.sophosquest.earth_crystal_axe": "Earth Crystal Axe",
+  "item.sophosquest.earth_crystal_shovel": "Earth Crystal Shovel",
+  "item.sophosquest.earth_crystal_hoe": "Earth Crystal Hoe",
+  "item.sophosquest.earth_crystal_helmet": "Earth Crystal Helmet",
+  "item.sophosquest.earth_crystal_chestplate": "Earth Crystal Chestplate",
+  "item.sophosquest.earth_crystal_leggings": "Earth Crystal Leggings",
+  "item.sophosquest.earth_crystal_boots": "Earth Crystal Boots",
+  "item.sophosquest.moofah_fur": "Moofah Fur",
+  "item.sophosquest.moofah_horn": "Moofah Horn",
+
+  "block.sophosquest.fossil_block": "Fossil Block",
+  "block.sophosquest.earth_crystal_ore": "Earth Crystal Ore",
+  "block.sophosquest.earth_crystal_block": "Earth Crystal Block",
+  "block.sophosquest.abrasive": "Abrasive",
+
+  "itemGroup.modBlocks": "Sophos Quest Blocks",
+  "itemGroup.modMaterials": "Sophos Quest Materials",
+  "itemGroup.modCombatTools": "Sophos Quest Combat and Tools"
+}

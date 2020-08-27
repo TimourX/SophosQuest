@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "sophosquest:earth_crystal_ore"
+  },
+  "result": {
+    "item": "sophosquest:earth_crystal",
+    "count": 2
+  },
+  "experience": 0.5,
+  "cookingtime": 100
+}

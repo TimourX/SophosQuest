@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "sophosquest:earth_crystal_block"
+    }
+  ],
+  "result": {
+    "item": "sophosquest:earth_crystal",
+    "count": 9
+  }
+}

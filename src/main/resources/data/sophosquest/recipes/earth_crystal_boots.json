@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    "X X"
+  ],
+  "key": {
+    "X": {
+      "item": "sophosquest:earth_crystal"
+    }
+  },
+  "result": {
+    "item": "sophosquest:earth_crystal_boots",
+    "count": 1
+  }
+}

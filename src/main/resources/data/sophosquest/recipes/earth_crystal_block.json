@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "sophosquest:earth_crystal"
+    }
+  },
+  "result": {
+    "item": "sophosquest:earth_crystal_block",
+    "count": 1
+  }
+}

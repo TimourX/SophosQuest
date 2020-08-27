@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "sophosquest:block/fossil_block" },
+    "facing=south": { "model": "sophosquest:block/fossil_block", "y":  180},
+    "facing=west": { "model": "sophosquest:block/fossil_block", "y":  270},
+    "facing=east": { "model": "sophosquest:block/fossil_block", "y":  90}
+  }
+}
