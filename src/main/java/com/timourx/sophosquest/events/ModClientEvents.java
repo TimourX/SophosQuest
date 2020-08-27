@@ -3,13 +3,9 @@ package com.timourx.sophosquest.events;
 import com.timourx.sophosquest.SophosQuest;
 import com.timourx.sophosquest.items.EarthCrystalArmorItem;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.item.ArmorStandEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.math.AxisAlignedBB;
-import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.player.AttackEntityEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -39,14 +35,4 @@ public class ModClientEvents {
             }
         }
     }
-
-    /*
-    @SubscribeEvent
-    public static void worldTick(TickEvent.WorldTickEvent event) {
-        World world = event.world;
-        for (LivingEntity entity : world.getLoadedEntitiesWithinAABB(LivingEntity.class, new AxisAlignedBB())) {
-
-        }
-    }
-     */
 }

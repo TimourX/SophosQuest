@@ -28,11 +28,7 @@ public class AbrasiveBlock extends Block {
             if (heldItem.getDamage() == 0) {
                 return ActionResultType.PASS;
             } else {
-                if (heldItem.getDamage() - DAMAGE_REMOVED < 0) {
-                    heldItem.setDamage(0);
-                } else {
-                    heldItem.setDamage(heldItem.getDamage() - DAMAGE_REMOVED);
-                }
+                heldItem.setDamage(Math.max(heldItem.getDamage() - DAMAGE_REMOVED, 0));
                 return ActionResultType.SUCCESS;
             }
         }
