@@ -46,7 +46,7 @@ The goal of the mod is to defeat the Furucaria, a gigantic and devastating monst
 
 - [ ] **Moofah Fur Armor:** this armor is less resistant than the leather armor, but it gives the effect of slow falling and regenation (already added but not yet finished);
 
-- [ ] **Wide-Range:** This effect will allow us to pass on the care we use to friends who play with us, or to members of our team. For example, if we take a regeneration potion with the Wide-Range effect, the regeneration effect will also be given to our friends in a certain radius. You will need a Moofah horn to craft a potion with this effect.
+- [ ] **Wide-Range:** This effect will allow us to pass on the care we use to friends who play with us, or to members of our team. For example, if we take a regeneration potion with the Wide-Range effect, the regeneration effect will also be given to our friends in a certain radius. You will need a Moofah horn to craft a potion with this effect;
 
 ---
 
