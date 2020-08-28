@@ -40,9 +40,9 @@ public class ModItems {
     public static final RegistryObject<EarthCrystalArmorItem> EARTH_CRYSTAL_LEGGINGS = ITEMS.register("earth_crystal_leggings", () -> new EarthCrystalArmorItem(ModArmorMaterial.EARTH_CRYTSAL, EquipmentSlotType.LEGS, new Item.Properties().group(ModItemGroups.MOD_COMBAT_TOOLS), 4));
     public static final RegistryObject<EarthCrystalArmorItem> EARTH_CRYSTAL_BOOTS = ITEMS.register("earth_crystal_boots", () -> new EarthCrystalArmorItem(ModArmorMaterial.EARTH_CRYTSAL, EquipmentSlotType.FEET, new Item.Properties().group(ModItemGroups.MOD_COMBAT_TOOLS), 1));
 
-    public static final RegistryObject<MoofahFurArmorItem> MOOFAH_FUR_HELMET = ITEMS.register("moofah_fur_helmet", () -> new MoofahFurArmorItem(ModArmorMaterial.MOOFAH_FUR, EquipmentSlotType.HEAD, new Item.Properties().group(ModItemGroups.MOD_COMBAT_TOOLS)));
-    public static final RegistryObject<MoofahFurArmorItem> MOOFAH_FUR_CHESTPLATE = ITEMS.register("moofah_fur_chestplate", () -> new MoofahFurArmorItem(ModArmorMaterial.MOOFAH_FUR, EquipmentSlotType.CHEST, new Item.Properties().group(ModItemGroups.MOD_COMBAT_TOOLS)));
-    public static final RegistryObject<MoofahFurArmorItem> MOOFAH_FUR_LEGGINGS = ITEMS.register("moofah_fur_leggings", () -> new MoofahFurArmorItem(ModArmorMaterial.MOOFAH_FUR, EquipmentSlotType.LEGS, new Item.Properties().group(ModItemGroups.MOD_COMBAT_TOOLS)));
+    public static final RegistryObject<MoofahFurArmorItem> MOOFAH_FUR_TURBAN = ITEMS.register("moofah_fur_turban", () -> new MoofahFurArmorItem(ModArmorMaterial.MOOFAH_FUR, EquipmentSlotType.HEAD, new Item.Properties().group(ModItemGroups.MOD_COMBAT_TOOLS)));
+    public static final RegistryObject<MoofahFurArmorItem> MOOFAH_FUR_MAIL = ITEMS.register("moofah_fur_mail", () -> new MoofahFurArmorItem(ModArmorMaterial.MOOFAH_FUR, EquipmentSlotType.CHEST, new Item.Properties().group(ModItemGroups.MOD_COMBAT_TOOLS)));
+    public static final RegistryObject<MoofahFurArmorItem> MOOFAH_FUR_PANTS = ITEMS.register("moofah_fur_pants", () -> new MoofahFurArmorItem(ModArmorMaterial.MOOFAH_FUR, EquipmentSlotType.LEGS, new Item.Properties().group(ModItemGroups.MOD_COMBAT_TOOLS)));
     public static final RegistryObject<MoofahFurArmorItem> MOOFAH_FUR_BOOTS = ITEMS.register("moofah_fur_boots", () -> new MoofahFurArmorItem(ModArmorMaterial.MOOFAH_FUR, EquipmentSlotType.FEET, new Item.Properties().group(ModItemGroups.MOD_COMBAT_TOOLS)));
 
     // Weapons

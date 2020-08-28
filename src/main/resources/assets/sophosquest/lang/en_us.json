@@ -13,6 +13,10 @@
   "item.sophosquest.earth_crystal_boots": "Earth Crystal Boots",
   "item.sophosquest.moofah_fur": "Moofah Fur",
   "item.sophosquest.moofah_horn": "Moofah Horn",
+  "item.sophosquest.moofah_fur_turban": "Moofah Fur Turban",
+  "item.sophosquest.moofah_fur_mail": "Moofah Fur Mail",
+  "item.sophosquest.moofah_fur_pants": "Moofah Fur Pants",
+  "item.sophosquest.moofah_fur_boots": "Moofah Fur Boots",
 
   "block.sophosquest.fossil_block": "Fossil Block",
   "block.sophosquest.earth_crystal_ore": "Earth Crystal Ore",
@@ -21,5 +25,6 @@
 
   "itemGroup.modBlocks": "Sophos Quest Blocks",
   "itemGroup.modMaterials": "Sophos Quest Materials",
-  "itemGroup.modCombatTools": "Sophos Quest Combat and Tools"
+  "itemGroup.modCombatTools": "Sophos Quest Combat and Tools",
+  "itemGroup.modFoods": "Sophos Quest Foodstuffs"
 }
