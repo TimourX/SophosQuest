@@ -4,6 +4,8 @@ I present you my first mod, SophosQuest. It's a mod largely inspired by the famo
 
 The goal of the mod is to defeat the Furucaria, a gigantic and devastating monster. To do this you will need the power of the earth to find minerals, and a great deal of knowledge to forge the ultimate sword, the Sophos Blade. To forge it, you'll need to travel through dimensions, escape hostile monsters and defeat bosses.
 
+The mod is still under development, don't hesitate to test it and tell me any bugs in https://github.com/TimourX/SophosQuest/issues.
+
 ---
 ## Features
 
