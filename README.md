@@ -8,7 +8,7 @@ The goal of the mod is to defeat the Furucaria, a gigantic and devastating monst
 ## Features
 
 ### Earth Crystal:
-- The earth crystal is a new gem that can be used as an abrasive for weapons and tools;
+- The earth crystal is a new gem that can be used as an abrasive for weapons and tools, when crafted into an abrasive block;
 
 - You can make solid tools out of it, but not very effective ones. Stronger but less effective than stone;
 
@@ -17,6 +17,8 @@ The goal of the mod is to defeat the Furucaria, a gigantic and devastating monst
 - You can make a block of earth crystal with 9 earth crystal;
 
 - The earth crystal ore is found in the overworld, and it is pretty common, but you can't find it very deeply. You get one or two earth crystals when you mine it, and you can smelt it (or blast it) to always get two;
+
+- The abrasive block is a new block that allows you to repair your weapons and tools using neither materials nor experience. You will need an earth crystal block, 2 earth crystals, an anvil and 3 iron ingots to craft it. Just right click on the block and it will decrease the damage to your weapons and tools. By dint of using it, it will turn into a chipped abrasive block, then into a damaged abrasive block, then it will break.
 
 ---
 
@@ -33,8 +35,6 @@ The goal of the mod is to defeat the Furucaria, a gigantic and devastating monst
 - This sword is important, but not very powerful. It does 3 hearts of damage, and it has a cooldown longer than normal swords.
 
 ## Future Features
-
-- [ ] **Abrasive:** This block repairs weapons and tools without minerals and experience (already added but not yet finished);
 
 - [ ] **Moofah:** This animal (from Monster Hunter universe) is like a mix between a sheep and a llama, with horns (sounds kind of weird). Search on Google, you'll find it;
 
