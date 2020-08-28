@@ -24,7 +24,7 @@ public class ModItems {
     // Block Items
     public static final RegistryObject<BlockItem> FOSSIL_BLOCK_ITEM = ITEMS.register("fossil_block", () -> new BlockItem(ModBlocks.FOSSIL_BLOCK.get(), new Item.Properties().group(ModItemGroups.MOD_BLOCKS)));
     public static final RegistryObject<BlockItem> EARTH_CRYSTAL_ORE_ITEM = ITEMS.register("earth_crystal_ore", () -> new BlockItem(ModBlocks.EARTH_CRYSTAL_ORE.get(), new Item.Properties().group(ModItemGroups.MOD_BLOCKS)));
-    public static final RegistryObject<BlockItem> ABRASIVE_ITEM = ITEMS.register("abrasive", () -> new BlockItem(ModBlocks.ABRASIVE.get(), new Item.Properties().group(ModItemGroups.MOD_BLOCKS)));
+    public static final RegistryObject<BlockItem> ABRASIVE_BLOCK_ITEM = ITEMS.register("abrasive_block", () -> new BlockItem(ModBlocks.ABRASIVE_BLOCK.get(), new Item.Properties().group(ModItemGroups.MOD_BLOCKS)));
     public static final RegistryObject<BlockItem> EARTH_CRYSTAL_BLOCK_ITEM = ITEMS.register("earth_crystal_block", () -> new BlockItem(ModBlocks.EARTH_CRYSTAL_BLOCK.get(), new Item.Properties().group(ModItemGroups.MOD_BLOCKS)));
 
     // Tools

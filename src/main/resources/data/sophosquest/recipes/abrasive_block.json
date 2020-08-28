@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " E ",
+    "eae",
+    "iii"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:anvil"
+    },
+    "e": {
+      "item": "sophosquest:earth_crystal"
+    },
+    "E": {
+      "item": "sophosquest:earth_crystal_block"
+    },
+    "i": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "sophosquest:abrasive_block",
+    "count": 1
+  }
+}
