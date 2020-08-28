@@ -48,5 +48,5 @@ public class ModItems {
     // Weapons
     // attackSpeed = 1 / (4 - attackSpeedIn) * 20 ticks
     public static final RegistryObject<PetrifiedBladeItem> PETRIFIED_BLADE = ITEMS.register("petrified_blade",
-            () -> new PetrifiedBladeItem(ModItemTier.FOSSIL, 0, -3.25f, new Item.Properties().group(ModItemGroups.MOD_COMBAT_TOOLS)));
+            () -> new PetrifiedBladeItem(ModItemTier.FOSSIL, 0, -3.25f, new Item.Properties().group(ModItemGroups.MOD_COMBAT_TOOLS).isBurnable()));
 }

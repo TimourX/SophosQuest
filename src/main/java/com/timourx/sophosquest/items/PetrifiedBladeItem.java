@@ -17,9 +17,4 @@ public class PetrifiedBladeItem extends SwordItem {
     public boolean isEnchantable(@Nonnull ItemStack stack) {
         return false;
     }
-
-    @Override
-    public boolean isBurnable() {
-        return false;
-    }
 }
