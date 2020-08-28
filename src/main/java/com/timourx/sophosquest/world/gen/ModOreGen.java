@@ -37,7 +37,7 @@ public class ModOreGen {
     private static void genOre(Biome biome, int count, int bottomOffset, int topOffset, int max, OreFeatureConfig.FillerBlockType filler, BlockState defaultBlockstate, int size) {
         CountRangeConfig range = new CountRangeConfig(count, bottomOffset, topOffset, max);
         OreFeatureConfig feature = new OreFeatureConfig(filler, defaultBlockstate, size);
-        ConfiguredPlacement config = Placement.COUNT_RANGE.configure(range);
+        ConfiguredPlacement<CountRangeConfig> config = Placement.COUNT_RANGE.configure(range);
         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(feature).withPlacement(config));
     }
 }
