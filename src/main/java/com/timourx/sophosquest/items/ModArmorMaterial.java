@@ -9,6 +9,7 @@ import net.minecraft.util.SoundEvents;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
+import javax.annotation.Nonnull;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterial implements IArmorMaterial {
@@ -52,17 +53,20 @@ public enum ModArmorMaterial implements IArmorMaterial {
     }
 
     @Override
+    @Nonnull
     public SoundEvent getSoundEvent() {
         return this.soundEvent;
     }
 
     @Override
+    @Nonnull
     public Ingredient getRepairMaterial() {
         return this.repairMaterial.get();
     }
 
     @OnlyIn(Dist.CLIENT)
     @Override
+    @Nonnull
     public String getName() {
         return this.name;
     }

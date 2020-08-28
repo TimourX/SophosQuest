@@ -4,6 +4,8 @@ import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 
+import javax.annotation.Nonnull;
+
 public class PetrifiedBladeItem extends SwordItem {
 
 
@@ -12,7 +14,7 @@ public class PetrifiedBladeItem extends SwordItem {
     }
 
     @Override
-    public boolean isEnchantable(ItemStack stack) {
+    public boolean isEnchantable(@Nonnull ItemStack stack) {
         return false;
     }
 

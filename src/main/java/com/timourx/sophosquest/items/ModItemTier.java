@@ -3,6 +3,7 @@ package com.timourx.sophosquest.items;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.crafting.Ingredient;
 
+import javax.annotation.Nonnull;
 import java.util.function.Supplier;
 
 public enum ModItemTier implements IItemTier {
@@ -51,6 +52,7 @@ public enum ModItemTier implements IItemTier {
     }
 
     @Override
+    @Nonnull
     public Ingredient getRepairMaterial() {
         return this.repairMaterial.get();
     }
