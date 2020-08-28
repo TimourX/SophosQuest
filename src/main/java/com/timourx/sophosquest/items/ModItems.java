@@ -24,8 +24,10 @@ public class ModItems {
     // Block Items
     public static final RegistryObject<BlockItem> FOSSIL_BLOCK_ITEM = ITEMS.register("fossil_block", () -> new BlockItem(ModBlocks.FOSSIL_BLOCK.get(), new Item.Properties().group(ModItemGroups.MOD_BLOCKS)));
     public static final RegistryObject<BlockItem> EARTH_CRYSTAL_ORE_ITEM = ITEMS.register("earth_crystal_ore", () -> new BlockItem(ModBlocks.EARTH_CRYSTAL_ORE.get(), new Item.Properties().group(ModItemGroups.MOD_BLOCKS)));
-    public static final RegistryObject<BlockItem> ABRASIVE_BLOCK_ITEM = ITEMS.register("abrasive_block", () -> new BlockItem(ModBlocks.ABRASIVE_BLOCK.get(), new Item.Properties().group(ModItemGroups.MOD_BLOCKS)));
     public static final RegistryObject<BlockItem> EARTH_CRYSTAL_BLOCK_ITEM = ITEMS.register("earth_crystal_block", () -> new BlockItem(ModBlocks.EARTH_CRYSTAL_BLOCK.get(), new Item.Properties().group(ModItemGroups.MOD_BLOCKS)));
+    public static final RegistryObject<BlockItem> ABRASIVE_BLOCK_ITEM = ITEMS.register("abrasive_block", () -> new BlockItem(ModBlocks.ABRASIVE_BLOCK.get(), new Item.Properties().group(ModItemGroups.MOD_BLOCKS)));
+    public static final RegistryObject<BlockItem> CHIPPED_ABRASIVE_BLOCK_ITEM = ITEMS.register("chipped_abrasive_block", () -> new BlockItem(ModBlocks.CHIPPED_ABRASIVE_BLOCK.get(), new Item.Properties().group(ModItemGroups.MOD_BLOCKS)));
+    public static final RegistryObject<BlockItem> DAMAGED_ABRASIVE_BLOCK_ITEM = ITEMS.register("damaged_abrasive_block", () -> new BlockItem(ModBlocks.DAMAGED_ABRASIVE_BLOCK.get(), new Item.Properties().group(ModItemGroups.MOD_BLOCKS)));
 
     // Tools
     public static final RegistryObject<SwordItem> EARTH_CRYSTAL_SWORD = ITEMS.register("earth_crystal_sword", () -> new SwordItem(ModItemTier.EARTH_CRYSTAL, 2, -2.4f, new Item.Properties().group(ModItemGroups.MOD_COMBAT_TOOLS)));
@@ -47,6 +49,5 @@ public class ModItems {
 
     // Weapons
     // attackSpeed = 1 / (4 - attackSpeedIn) * 20 ticks
-    public static final RegistryObject<PetrifiedBladeItem> PETRIFIED_BLADE = ITEMS.register("petrified_blade",
-            () -> new PetrifiedBladeItem(ModItemTier.FOSSIL, 0, -3.25f, new Item.Properties().group(ModItemGroups.MOD_COMBAT_TOOLS).isBurnable()));
+    public static final RegistryObject<PetrifiedBladeItem> PETRIFIED_BLADE = ITEMS.register("petrified_blade", () -> new PetrifiedBladeItem(ModItemTier.FOSSIL, 0, -3.25f, new Item.Properties().group(ModItemGroups.MOD_COMBAT_TOOLS).isBurnable()));
 }

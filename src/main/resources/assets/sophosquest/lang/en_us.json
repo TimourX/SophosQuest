@@ -22,6 +22,8 @@
   "block.sophosquest.earth_crystal_ore": "Earth Crystal Ore",
   "block.sophosquest.earth_crystal_block": "Earth Crystal Block",
   "block.sophosquest.abrasive_block": "Abrasive Block",
+  "block.sophosquest.chipped_abrasive_block": "Chipped Abrasive Block",
+  "block.sophosquest.damaged_abrasive_block": "Damaged Abrasive Block",
 
   "itemGroup.modBlocks": "Sophos Quest Blocks",
   "itemGroup.modMaterials": "Sophos Quest Materials",

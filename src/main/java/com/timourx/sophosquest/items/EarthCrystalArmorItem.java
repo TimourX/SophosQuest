@@ -1,4 +1,3 @@
-// Pour les tests :
 // /summon husk ~ ~1 ~ {ArmorItems:[{Count:1,id:"sophosquest:earth_crystal_boots"},{Count:1,id:"sophosquest:earth_crystal_leggings"},{Count:1,id:"sophosquest:earth_crystal_chestplate"},{Count:1,id:"sophosquest:earth_crystal_helmet"}]}
 package com.timourx.sophosquest.items;
 

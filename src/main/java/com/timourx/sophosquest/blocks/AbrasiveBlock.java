@@ -1,10 +1,9 @@
 package com.timourx.sophosquest.blocks;
 
+import com.timourx.sophosquest.SophosQuest;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalBlock;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.ItemStack;
@@ -24,7 +23,6 @@ import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
-import net.minecraftforge.common.ToolType;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -33,6 +31,7 @@ import java.util.stream.Stream;
 public class AbrasiveBlock extends Block {
 
     private static final int DAMAGE_REMOVED = 40;
+    private static final float BREAK_CHANCE = 0.04f;
     private static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
 
     private static final VoxelShape SHAPE_NS = Stream.of(
@@ -45,29 +44,40 @@ public class AbrasiveBlock extends Block {
             Block.makeCuboidShape(11, 0, 1, 15, 7, 15),
             Block.makeCuboidShape(1, 0, 1, 5, 7, 15)).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, IBooleanFunction.OR)).get();
 
-    public AbrasiveBlock() {
-        super(Block.Properties.create(Material.ANVIL)
-                .sound(SoundType.ANVIL)
-                .setRequiresTool()
-                .hardnessAndResistance(5.0f, 1200.0f)
-                .harvestLevel(1)
-                .harvestTool(ToolType.PICKAXE)
-        );
+    public AbrasiveBlock(Block.Properties properties) {
+        super(properties);
     }
 
     @Override
     @Nonnull
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
-        ItemStack heldItem = player.getHeldItem(handIn);
-        if (heldItem.getItem() instanceof TieredItem || heldItem.getItem() == Items.SHEARS) {
-            if (heldItem.getDamage() == 0) {
-                return ActionResultType.PASS;
-            } else {
-                heldItem.setDamage(Math.max(heldItem.getDamage() - DAMAGE_REMOVED, 0));
-                return ActionResultType.SUCCESS;
+        if (!worldIn.isRemote) {
+            ItemStack heldItem = player.getHeldItem(handIn);
+            if (heldItem.getItem() instanceof TieredItem || heldItem.getItem() == Items.SHEARS) {
+                if (heldItem.getDamage() == 0) {
+                    return ActionResultType.PASS;
+                } else {
+                    heldItem.setDamage(Math.max(heldItem.getDamage() - DAMAGE_REMOVED, 0));
+                    float RNG = player.getRNG().nextFloat();
+                    SophosQuest.LOGGER.info(player.getRNG().nextFloat());
+                    if (RNG < BREAK_CHANCE) {
+                        damage(state, worldIn, pos);
+                    }
+                    return ActionResultType.SUCCESS;
+                }
             }
         }
         return ActionResultType.PASS;
+    }
+
+    public static void damage(BlockState state, World world, BlockPos pos) {
+        if (state.isIn(ModBlocks.ABRASIVE_BLOCK.get())) {
+            world.setBlockState(pos, ModBlocks.CHIPPED_ABRASIVE_BLOCK.get().getDefaultState().with(FACING, state.get(FACING)), 2);
+        } else if (state.isIn(ModBlocks.CHIPPED_ABRASIVE_BLOCK.get())) {
+            world.setBlockState(pos, ModBlocks.DAMAGED_ABRASIVE_BLOCK.get().getDefaultState().with(FACING, state.get(FACING)), 2);
+        } else {
+            world.destroyBlock(pos, false);
+        }
     }
 
     @Override
