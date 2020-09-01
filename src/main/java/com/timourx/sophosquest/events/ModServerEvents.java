@@ -14,7 +14,7 @@ import net.minecraftforge.fml.common.Mod;
 import java.util.ArrayList;
 
 @Mod.EventBusSubscriber(modid = SophosQuest.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.DEDICATED_SERVER)
-public class ForgeBusServerEvents {
+public class ModServerEvents {
 
     @SubscribeEvent
     public static void onServerPlayerAttackEntity(AttackEntityEvent event) {
