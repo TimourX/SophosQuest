@@ -10,6 +10,7 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.IWorldReader;
 import net.minecraftforge.common.ToolType;
 
+import javax.annotation.Nonnull;
 import java.util.Random;
 
 public class EarthCrystalOre extends OreBlock {
@@ -25,7 +26,7 @@ public class EarthCrystalOre extends OreBlock {
     }
 
     @Override
-    public int getExpDrop(BlockState state, IWorldReader reader, BlockPos pos, int fortune, int silktouch) {
+    public int getExpDrop( BlockState state, IWorldReader reader, BlockPos pos, int fortune, int silktouch) {
         return MathHelper.nextInt(new Random(), 1, 2);
     }
 }

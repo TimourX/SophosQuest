@@ -21,7 +21,7 @@ public class ForgeBusServerEvents {
         if (!event.getPlayer().getEntityWorld().isRemote) {
             if (!event.getPlayer().isCreative()) {
                 Entity target = event.getTarget();
-                if (target.isLiving() && !(target instanceof ArmorStandEntity)) {
+                if (target instanceof LivingEntity && !(target instanceof ArmorStandEntity)) {
                     ArrayList<ItemStack> armorStack = new ArrayList<>();
                     for (ItemStack itemStack : target.getEquipmentAndArmor()) {
                         armorStack.add(itemStack);

@@ -41,6 +41,6 @@ public class MoofahFurArmorItem extends DyeableArmorItem {
     @Override
     public int getColor(ItemStack stack) {
         CompoundNBT compoundnbt = stack.getChildTag("display");
-        return compoundnbt != null && compoundnbt.contains("color", 99) ? compoundnbt.getInt("color") : 16775893;
+        return compoundnbt != null && compoundnbt.contains("color", 99) ? compoundnbt.getInt("color") : 0xfff8c8;
     }
 }

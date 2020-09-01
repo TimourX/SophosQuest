@@ -5,12 +5,8 @@ import com.timourx.sophosquest.SophosQuest;
 import com.timourx.sophosquest.items.EarthCrystalArmorItem;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.ArmorStandEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.DyeableArmorItem;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.Hand;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.player.AttackEntityEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -38,15 +34,6 @@ public class ForgeBusClientEvents {
                         }
                     }
                 }
-            }
-        }
-    }
-
-    @SubscribeEvent
-    public static void testJump(LivingEvent.LivingJumpEvent event) {
-        if (event.getEntityLiving() instanceof PlayerEntity) {
-            if (event.getEntityLiving().getHeldItem(Hand.MAIN_HAND).getItem() instanceof DyeableArmorItem) {
-                SophosQuest.LOGGER.info(((DyeableArmorItem) event.getEntityLiving().getHeldItem(Hand.MAIN_HAND).getItem()).getColor(event.getEntityLiving().getHeldItem(Hand.MAIN_HAND)));
             }
         }
     }

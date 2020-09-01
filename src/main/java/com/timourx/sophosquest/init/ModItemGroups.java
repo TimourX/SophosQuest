@@ -1,6 +1,5 @@
 package com.timourx.sophosquest.init;
 
-import com.timourx.sophosquest.init.ModItems;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 

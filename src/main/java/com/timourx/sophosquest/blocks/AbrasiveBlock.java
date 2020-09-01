@@ -117,7 +117,7 @@ public class AbrasiveBlock extends Block {
     }
 
     @Override
-    public float getAmbientOcclusionLightValue(BlockState state, @Nonnull IBlockReader worldIn, @Nonnull BlockPos pos) {
+    public float getAmbientOcclusionLightValue(BlockState state, IBlockReader worldIn, BlockPos pos) {
         return 0.3f;
     }
 }

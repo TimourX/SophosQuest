@@ -12,12 +12,12 @@ public enum ModItemTier implements IItemTier {
     FOSSIL(0, 200,0.0f, 5.0f, 0, () -> {return Ingredient.fromItems(ModItems.EARTH_CRYSTAL.get());}),
     EARTH_CRYSTAL(2, 200, 2.0f, 1.0f, 3, () -> {return Ingredient.fromItems(ModItems.EARTH_CRYSTAL.get());});
 
-    private int harvestLevel;
+    private final int harvestLevel;
     private final int maxUses;
     private final float efficiency;
     private final float attackDamage;
-    private int enchantability;
-    private Supplier<Ingredient> repairMaterial;
+    private final int enchantability;
+    private final Supplier<Ingredient> repairMaterial;
 
     ModItemTier(int harvestLevel, int maxUses, float efficiency, float attackDamage, int enchantability, Supplier<Ingredient> repairMaterial) {
         this.harvestLevel = harvestLevel;
