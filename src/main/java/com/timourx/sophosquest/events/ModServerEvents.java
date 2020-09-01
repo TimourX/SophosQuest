@@ -19,18 +19,19 @@ public class ModServerEvents {
     @SubscribeEvent
     public static void onServerPlayerAttackEntity(AttackEntityEvent event) {
         if (!event.getPlayer().getEntityWorld().isRemote) {
-            Entity target = event.getTarget();
-            if (target instanceof LivingEntity && !(target instanceof ArmorStandEntity)) {
-                ArrayList<ItemStack> armorStack = new ArrayList<>();
-                for (ItemStack itemStack : target.getEquipmentAndArmor()) {
-                    armorStack.add(itemStack);
-                }
-                armorStack.remove(0);
-                armorStack.remove(0);
-                for (ItemStack itemStack : armorStack) {
-                    if (itemStack.getItem() instanceof EarthCrystalArmorItem) {
-                        EarthCrystalArmorItem.onEntityAttackedWithEquipedArmor(event.getPlayer(), event.getPlayer().getActiveHand(), armorStack);
-                        break;
+            if (!event.getPlayer().isCreative()) {
+                Entity target = event.getTarget();
+                if (target.isLiving() && !(target instanceof ArmorStandEntity)) {
+                    ArrayList<ItemStack> armorStack = new ArrayList<>();
+                    for (ItemStack itemStack : target.getEquipmentAndArmor()) {
+                        armorStack.add(itemStack);
+                    }
+                    armorStack.remove(0);
+                    armorStack.remove(0);
+                    for (ItemStack itemStack : armorStack) {
+                        if (itemStack.getItem() instanceof EarthCrystalArmorItem) {
+                            ((EarthCrystalArmorItem) itemStack.getItem()).setDamage((EarthCrystalArmorItem) itemStack.getItem(), event.getPlayer().getHeldItem(event.getPlayer().getActiveHand()));
+                        }
                     }
                 }
             }

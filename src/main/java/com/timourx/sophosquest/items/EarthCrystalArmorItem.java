@@ -13,31 +13,40 @@ import java.util.ArrayList;
 
 public class EarthCrystalArmorItem extends ArmorItem {
 
-    private int damageMultiplier;
+    private final int DAMAGE_ADDER;
 
-    public EarthCrystalArmorItem(IArmorMaterial materialIn, EquipmentSlotType slot, Properties builderIn, int damageMultiplier) {
+    public EarthCrystalArmorItem(IArmorMaterial materialIn, EquipmentSlotType slot, Properties builderIn, int damageAdder) {
         super(materialIn, slot, builderIn);
-        this.damageMultiplier = damageMultiplier;
+        this.DAMAGE_ADDER = damageAdder;
     }
 
-    public int getDamageMultiplier() {
-        return damageMultiplier;
+    public int getDamageAdder() {
+        return DAMAGE_ADDER;
     }
 
+    public void setDamage(EarthCrystalArmorItem equipment, ItemStack heldItem) {
+        if (heldItem.getItem() instanceof TieredItem) {
+            if (!(((TieredItem) heldItem.getItem()).getTier() == ModItemTier.EARTH_CRYSTAL || ((TieredItem) heldItem.getItem()).getTier() == ModItemTier.FOSSIL)) {
+                heldItem.setDamage(heldItem.getDamage() + equipment.getDamageAdder());
+            }
+        }
+    }
+    /*
     public static void onEntityAttackedWithEquipedArmor(PlayerEntity player, Hand hand, ArrayList<ItemStack> armorStack) {
         ItemStack heldItem = player.getHeldItem(hand);
-        int damageMultiplier = 0;
+        int DAMAGE_ADDER = 0;
         if (!player.isCreative()) {
             if (heldItem.getItem() instanceof TieredItem) {
                 if (!(((TieredItem) heldItem.getItem()).getTier() == ModItemTier.EARTH_CRYSTAL || ((TieredItem) heldItem.getItem()).getTier() == ModItemTier.FOSSIL)) {
                     for (ItemStack itemStack : armorStack) {
                         if (itemStack.getItem() instanceof EarthCrystalArmorItem) {
-                            damageMultiplier += ((EarthCrystalArmorItem) itemStack.getItem()).getDamageMultiplier();
+                            DAMAGE_ADDER += ((EarthCrystalArmorItem) itemStack.getItem()).getDamageAdder();
                         }
                     }
-                    heldItem.setDamage(heldItem.getDamage() + damageMultiplier);
+                    heldItem.setDamage(heldItem.getDamage() + DAMAGE_ADDER);
                 }
             }
         }
     }
+     */
 }
