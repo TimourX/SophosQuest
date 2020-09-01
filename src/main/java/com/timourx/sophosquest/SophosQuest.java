@@ -2,7 +2,9 @@ package com.timourx.sophosquest;
 
 import com.timourx.sophosquest.blocks.ModBlocks;
 import com.timourx.sophosquest.items.ModItems;
+import net.minecraftforge.client.event.ColorHandlerEvent;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;

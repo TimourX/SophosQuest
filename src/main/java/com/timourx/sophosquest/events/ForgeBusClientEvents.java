@@ -26,7 +26,7 @@ import net.minecraftforge.fml.common.Mod;
 import java.util.ArrayList;
 
 @Mod.EventBusSubscriber(modid = SophosQuest.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
-public class ModClientEvents {
+public class ForgeBusClientEvents {
 
     @SubscribeEvent
     public static void onClientPlayerAttackEntity(AttackEntityEvent event) {
@@ -57,10 +57,5 @@ public class ModClientEvents {
                 SophosQuest.LOGGER.info(((DyeableArmorItem) event.getEntityLiving().getHeldItem(Hand.MAIN_HAND).getItem()).getColor(event.getEntityLiving().getHeldItem(Hand.MAIN_HAND)));
             }
         }
-    }
-
-    @SubscribeEvent
-    public static void itemColorsRegistryHandler(ColorHandlerEvent.Item event) {
-        event.getItemColors().register((stack, color) -> color > 0 ? -1 : ((IDyeableArmorItem)stack.getItem()).getColor(stack), ModItems.MOOFAH_FUR_TURBAN.get(), ModItems.MOOFAH_FUR_MAIL.get(), ModItems.MOOFAH_FUR_PANTS.get(), ModItems.MOOFAH_FUR_BOOTS.get());
     }
 }

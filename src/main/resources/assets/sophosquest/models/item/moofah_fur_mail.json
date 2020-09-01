@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "sophosquest:items/moofah_fur_mail",
+    "layer1": "sophosquest:items/moofah_fur_mail_overlay"
+  }
+}
