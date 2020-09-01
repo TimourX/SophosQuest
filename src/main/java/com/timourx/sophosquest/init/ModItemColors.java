@@ -1,7 +1,7 @@
-package com.timourx.sophosquest.events;
+package com.timourx.sophosquest.init;
 
 import com.timourx.sophosquest.SophosQuest;
-import com.timourx.sophosquest.items.ModItems;
+import com.timourx.sophosquest.init.ModItems;
 import net.minecraft.item.IDyeableArmorItem;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.ColorHandlerEvent;
@@ -9,7 +9,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = SophosQuest.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-public class ModBusClientEvents {
+public class ModItemColors {
 
     @SubscribeEvent
     public static void itemColorsRegistryHandler(ColorHandlerEvent.Item event) {

@@ -1,6 +1,7 @@
-package com.timourx.sophosquest.items;
+package com.timourx.sophosquest.init;
 
 import com.timourx.sophosquest.SophosQuest;
+import com.timourx.sophosquest.init.ModItems;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.crafting.Ingredient;

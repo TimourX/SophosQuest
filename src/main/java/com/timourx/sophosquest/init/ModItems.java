@@ -1,7 +1,7 @@
-package com.timourx.sophosquest.items;
+package com.timourx.sophosquest.init;
 
 import com.timourx.sophosquest.SophosQuest;
-import com.timourx.sophosquest.blocks.ModBlocks;
+import com.timourx.sophosquest.items.*;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraftforge.fml.RegistryObject;

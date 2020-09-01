@@ -1,7 +1,7 @@
 package com.timourx.sophosquest.world.gen;
 
 import com.timourx.sophosquest.SophosQuest;
-import com.timourx.sophosquest.blocks.ModBlocks;
+import com.timourx.sophosquest.init.ModBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;

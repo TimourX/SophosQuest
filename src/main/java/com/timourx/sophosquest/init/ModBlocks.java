@@ -1,6 +1,9 @@
-package com.timourx.sophosquest.blocks;
+package com.timourx.sophosquest.init;
 
 import com.timourx.sophosquest.SophosQuest;
+import com.timourx.sophosquest.blocks.AbrasiveBlock;
+import com.timourx.sophosquest.blocks.EarthCrystalOre;
+import com.timourx.sophosquest.blocks.FossilBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
