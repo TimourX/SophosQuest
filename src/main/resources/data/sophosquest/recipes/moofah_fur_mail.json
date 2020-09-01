@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "f f",
+    "fff",
+    "fff"
+  ],
+  "key": {
+    "f": {
+      "item": "sophosquest:moofah_fur"
+    }
+  },
+  "result": {
+    "item": "sophosquest:moofah_fur_mail",
+    "count": 1
+  }
+}
