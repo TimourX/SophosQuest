@@ -1,6 +1,8 @@
 package com.timourx.sophosquest.init;
 
 import com.timourx.sophosquest.SophosQuest;
+import com.timourx.sophosquest.init.enums.ModArmorMaterial;
+import com.timourx.sophosquest.init.enums.ModItemTier;
 import com.timourx.sophosquest.items.*;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;

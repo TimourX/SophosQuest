@@ -1,4 +1,4 @@
-package com.timourx.sophosquest.init;
+package com.timourx.sophosquest.init.enums;
 
 import com.timourx.sophosquest.init.ModItems;
 import net.minecraft.item.IItemTier;

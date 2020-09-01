@@ -1,7 +1,7 @@
 // /summon husk ~ ~1 ~ {ArmorItems:[{Count:1,id:"sophosquest:earth_crystal_boots"},{Count:1,id:"sophosquest:earth_crystal_leggings"},{Count:1,id:"sophosquest:earth_crystal_chestplate"},{Count:1,id:"sophosquest:earth_crystal_helmet"}]}
 package com.timourx.sophosquest.items;
 
-import com.timourx.sophosquest.init.ModItemTier;
+import com.timourx.sophosquest.init.enums.ModItemTier;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.IArmorMaterial;
