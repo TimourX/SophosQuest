@@ -32,8 +32,8 @@ public class MoofahFurArmorItem extends DyeableArmorItem {
             if (!Objects.equals(player.getActivePotionEffect(Effects.SLOW_FALLING), new EffectInstance(Effects.SLOW_FALLING))) {
                 player.addPotionEffect(new EffectInstance(Effects.SLOW_FALLING, 10));
             }
-            if (!Objects.equals(player.getActivePotionEffect(Effects.REGENERATION), new EffectInstance(Effects.REGENERATION))) {
-                player.addPotionEffect(new EffectInstance(Effects.REGENERATION, 10));
+            if (!Objects.equals(player.getActivePotionEffect(Effects.RESISTANCE), new EffectInstance(Effects.RESISTANCE))) {
+                player.addPotionEffect(new EffectInstance(Effects.RESISTANCE, 10));
             }
         }
     }
