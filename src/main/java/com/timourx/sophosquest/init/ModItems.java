@@ -21,7 +21,8 @@ public class ModItems {
     public static final RegistryObject<Item> MOOFAH_HORN = ITEMS.register("moofah_horn", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_MATERIALS))); // Dans une potion, ça donne l'effet Wide-Range (Soutien) qui tranfère tout les effets de bonus à nos amis et animaux
 
     // Foods
-    public static final RegistryObject<Item> RAW_MOOFAH_MEAT = ITEMS.register("raw_moofah_meat", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_FOODS).food(new Food.Builder().meat().hunger(5).saturation(0.3f).setAlwaysEdible().build())));
+    public static final RegistryObject<Item> RAW_MOOFAH_MEAT = ITEMS.register("raw_moofah_meat", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_FOODS).food(new Food.Builder().meat().hunger(2).saturation(0.3f).setAlwaysEdible().build())));
+    public static final RegistryObject<Item> COOKED_MOOFAH_MEAT = ITEMS.register("cooked_moofah_meat", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_FOODS).food(new Food.Builder().meat().hunger(6).saturation(0.8f).setAlwaysEdible().build())));
 
     // Block Items
     public static final RegistryObject<BlockItem> EARTH_CRYSTAL_ORE_ITEM = ITEMS.register("earth_crystal_ore", () -> new BlockItem(ModBlocks.EARTH_CRYSTAL_ORE.get(), new Item.Properties().group(ModItemGroups.MOD_BLOCKS)));

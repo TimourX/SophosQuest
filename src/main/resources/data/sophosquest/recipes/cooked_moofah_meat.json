@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "sophosquest:raw_moofah_meat"
+  },
+  "result": "sophosquest:cooked_moofah_meat",
+  "experience": 0.35,
+  "cookingtime": 100
+}
