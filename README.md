@@ -29,6 +29,14 @@ The goal of the mod is to defeat the Furucaria, a gigantic and devastating monst
 
 ---
 
+### Moofah:
+- The moofah will be a new entity (in development);
+
+- The moofah fur armor is a new dyeable armor, that is less resistant than the leather armor, but it gives the effect of slow falling and resistance when you have the complete set;
+
+
+---
+
 ### Petrified Blade:
 - This sword is very important. It is made with 4 iron ingots, an earth crystal, and a fossil, and you will have to improve it to be able to defeat the Furucaria. This is the first stage of the Sophos blade.
 
@@ -43,8 +51,6 @@ The goal of the mod is to defeat the Furucaria, a gigantic and devastating monst
 - [ ] **Moofah Horn:** This item will be used to craft a new effect (already added but not yet finished);
 
 - [ ] **Moofah Meat:** This is a new food (already added but not yet finished);
-
-- [ ] **Moofah Fur Armor:** this armor is less resistant than the leather armor, but it gives the effect of slow falling and resistance (already added but not yet finished);
 
 - [ ] **Wide-Range:** This effect will allow us to pass on the care we use to friends who play with us, or to members of our team. For example, if we take a regeneration potion with the Wide-Range effect, the regeneration effect will also be given to our friends in a certain radius. You will need a Moofah horn to craft a potion with this effect;
 
