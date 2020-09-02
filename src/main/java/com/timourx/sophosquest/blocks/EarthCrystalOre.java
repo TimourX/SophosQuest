@@ -26,7 +26,7 @@ public class EarthCrystalOre extends OreBlock {
     }
 
     @Override
-    public int getExpDrop( BlockState state, IWorldReader reader, BlockPos pos, int fortune, int silktouch) {
+    public int getExpDrop(BlockState state, IWorldReader reader, BlockPos pos, int fortune, int silktouch) {
         return MathHelper.nextInt(new Random(), 1, 2);
     }
 }

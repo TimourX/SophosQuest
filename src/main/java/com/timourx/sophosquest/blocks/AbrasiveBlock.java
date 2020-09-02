@@ -1,6 +1,5 @@
 package com.timourx.sophosquest.blocks;
 
-import com.timourx.sophosquest.SophosQuest;
 import com.timourx.sophosquest.init.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -60,7 +59,6 @@ public class AbrasiveBlock extends Block {
                 } else {
                     heldItem.setDamage(Math.max(heldItem.getDamage() - DAMAGE_REMOVED, 0));
                     float RNG = player.getRNG().nextFloat();
-                    SophosQuest.LOGGER.info(player.getRNG().nextFloat());
                     if (RNG < BREAK_CHANCE) {
                         damage(state, worldIn, pos);
                     }
@@ -118,6 +116,6 @@ public class AbrasiveBlock extends Block {
 
     @Override
     public float getAmbientOcclusionLightValue(BlockState state, IBlockReader worldIn, BlockPos pos) {
-        return 0.3f;
+        return 0.7f;
     }
 }
