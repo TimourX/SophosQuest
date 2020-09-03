@@ -32,8 +32,9 @@ The goal of the mod is to defeat the Furucaria, a gigantic and devastating monst
 ### Moofah:
 - The moofah will be a new entity (in development);
 
-- The moofah fur armor is a new dyeable armor, that is less resistant than the leather armor, but it gives the effect of slow falling and resistance when you have the complete set;
+- The moofah fur armor is a new dyeable armor, that is less resistant than the leather armor, but it gives the effect of slow falling and resistance when you have the complete set. You will need moofah furs and moofah fleeceballs to craft it;
 
+- The moofah fleeceball is a new block. Craft it with 9 moofah furs;
 
 ---
 
