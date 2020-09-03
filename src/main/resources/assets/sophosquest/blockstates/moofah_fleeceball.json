@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "sophosquest:block/moofah_fleeceball" },
+    "facing=south": { "model": "sophosquest:block/moofah_fleeceball", "y":  180},
+    "facing=west": { "model": "sophosquest:block/moofah_fleeceball", "y":  270},
+    "facing=east": { "model": "sophosquest:block/moofah_fleeceball", "y":  90}
+  }
+}

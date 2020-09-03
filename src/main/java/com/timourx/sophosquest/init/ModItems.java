@@ -31,6 +31,7 @@ public class ModItems {
     public static final RegistryObject<BlockItem> ABRASIVE_BLOCK_ITEM = ITEMS.register("abrasive_block", () -> new BlockItem(ModBlocks.ABRASIVE_BLOCK.get(), new Item.Properties().group(ModItemGroups.MOD_BLOCKS)));
     public static final RegistryObject<BlockItem> CHIPPED_ABRASIVE_BLOCK_ITEM = ITEMS.register("chipped_abrasive_block", () -> new BlockItem(ModBlocks.CHIPPED_ABRASIVE_BLOCK.get(), new Item.Properties().group(ModItemGroups.MOD_BLOCKS)));
     public static final RegistryObject<BlockItem> DAMAGED_ABRASIVE_BLOCK_ITEM = ITEMS.register("damaged_abrasive_block", () -> new BlockItem(ModBlocks.DAMAGED_ABRASIVE_BLOCK.get(), new Item.Properties().group(ModItemGroups.MOD_BLOCKS)));
+    public static final RegistryObject<BlockItem> MOOFAH_FLEECEBALL_ITEM = ITEMS.register("moofah_fleeceball", () -> new BlockItem(ModBlocks.MOOFAH_FLEECEBALL.get(), new Item.Properties().group(ModItemGroups.MOD_BLOCKS)));
 
     // Tools
     public static final RegistryObject<SwordItem> EARTH_CRYSTAL_SWORD = ITEMS.register("earth_crystal_sword", () -> new SwordItem(ModItemTier.EARTH_CRYSTAL, 2, -2.4f, new Item.Properties().group(ModItemGroups.MOD_COMBAT_TOOLS)));

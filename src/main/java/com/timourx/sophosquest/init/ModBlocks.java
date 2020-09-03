@@ -4,6 +4,8 @@ import com.timourx.sophosquest.SophosQuest;
 import com.timourx.sophosquest.blocks.AbrasiveBlock;
 import com.timourx.sophosquest.blocks.EarthCrystalOre;
 import com.timourx.sophosquest.blocks.FossilBlock;
+import com.timourx.sophosquest.blocks.MoofahFleeceballBlock;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -23,4 +25,5 @@ public class ModBlocks {
     public static final RegistryObject<Block> ABRASIVE_BLOCK = BLOCKS.register("abrasive_block", () -> new AbrasiveBlock(Block.Properties.create(Material.ANVIL).sound(SoundType.ANVIL).setRequiresTool().hardnessAndResistance(5.0f, 1200.0f).harvestLevel(1).harvestTool(ToolType.PICKAXE)));
     public static final RegistryObject<Block> CHIPPED_ABRASIVE_BLOCK = BLOCKS.register("chipped_abrasive_block", () -> new AbrasiveBlock(Block.Properties.create(Material.ANVIL).sound(SoundType.ANVIL).setRequiresTool().hardnessAndResistance(5.0f, 1200.0f).harvestLevel(1).harvestTool(ToolType.PICKAXE)));
     public static final RegistryObject<Block> DAMAGED_ABRASIVE_BLOCK = BLOCKS.register("damaged_abrasive_block", () -> new AbrasiveBlock(Block.Properties.create(Material.ANVIL).sound(SoundType.ANVIL).setRequiresTool().hardnessAndResistance(2.5f).harvestLevel(1).harvestTool(ToolType.PICKAXE)));
+    public static final RegistryObject<Block> MOOFAH_FLEECEBALL = BLOCKS.register("moofah_fleeceball", () -> new MoofahFleeceballBlock(Block.Properties.create(Material.WOOL).sound(SoundType.CLOTH).hardnessAndResistance(0.8f)));
 }
