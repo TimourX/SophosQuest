@@ -24,10 +24,12 @@
   "block.sophosquest.abrasive_block": "Abrasive Block",
   "block.sophosquest.chipped_abrasive_block": "Chipped Abrasive Block",
   "block.sophosquest.damaged_abrasive_block": "Damaged Abrasive Block",
-  "block.sophosquest.moofah_fleeceball": "Damaged Abrasive Block",
+  "block.sophosquest.moofah_fleeceball": "Moofah Fleeceball",
 
   "itemGroup.modBlocks": "Sophos Quest Blocks",
   "itemGroup.modMaterials": "Sophos Quest Materials",
   "itemGroup.modCombatTools": "Sophos Quest Combat and Tools",
-  "itemGroup.modFoods": "Sophos Quest Foodstuffs"
+  "itemGroup.modFoods": "Sophos Quest Foodstuffs",
+
+  "entity.sophosquest.female_moofah": "Female Moofah"
 }

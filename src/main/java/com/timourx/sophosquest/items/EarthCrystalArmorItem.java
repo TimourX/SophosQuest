@@ -2,6 +2,8 @@
 package com.timourx.sophosquest.items;
 
 import com.timourx.sophosquest.init.enums.ModItemTier;
+import net.minecraft.client.renderer.entity.model.BipedModel;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.IArmorMaterial;
