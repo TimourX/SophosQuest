@@ -195,62 +195,75 @@ public class FemaleMoofahModel<T extends FemaleMoofahEntity> extends EntityModel
 
         float globalSpeed = 1f;
         float globalHeight = 1.0f;
+
         float globalLegDegree = 0.9f;
 
         float oppositeOffset = 600.0f;
         float offsetDifference = -2f;
 
-        if (entityIn.isInWater() && entityIn.func_233571_b_(FluidTags.WATER) > entityIn.func_233579_cu_() || entityIn.isInLava()) {
-            rotateAngleX(tail, 0.2f * globalSpeed, 0.1f * globalLegDegree, false, 0, -1.4f, limbSwing, limbSwingAmount);
+        float globalRunningSpeed = 1f;
+        
+        rotateAngleX(tail, 0.35f * globalRunningSpeed, 0.1f, false, 0, -0.5f, limbSwing, limbSwingAmount);
 
-            rotateAngleX(neck, 0.2f * globalSpeed, 0.4f * globalLegDegree, false, 0, 0, limbSwing, limbSwingAmount);
-            rotateAngleX(head, 0.2f * globalSpeed, 0.4f * globalLegDegree, true, 0, 0, limbSwing, limbSwingAmount);
+        rotateAngleX(neck, 0.35f * globalRunningSpeed, 0.4f, false, 0, 0, limbSwing, limbSwingAmount);
+        rotateAngleX(head, 0.35f * globalRunningSpeed, 0.4f, true, 0, 0, limbSwing, limbSwingAmount);
 
-            rotateAngleX(frontLeftLeg, 0.2f * globalSpeed, 0.9f * globalLegDegree, false, 0.85f, 0.55f, limbSwing, limbSwingAmount);
-            rotateAngleX(frontLeftThigh, 0.2f * globalSpeed, 0.7f * globalLegDegree, false, -0.5f, -1.5f, limbSwing, limbSwingAmount);
-            rotateAngleX(frontLeftFoot, 0.2f * globalSpeed, 1.2f * globalLegDegree, false, -1.2f, -1.2f, limbSwing, limbSwingAmount);
+        rotateAngleX(frontLeftLeg, 0.35f * globalRunningSpeed, 1, false, 0, 0, limbSwing, limbSwingAmount);
 
-            rotateAngleX(frontRightLeg, 0.2f * globalSpeed, 0.9f * globalLegDegree, false, 0.85f + oppositeOffset, 0.55f, limbSwing, limbSwingAmount);
-            rotateAngleX(frontRightThigh, 0.2f * globalSpeed, 0.7f * globalLegDegree, false, -0.5f + oppositeOffset, -1.5f, limbSwing, limbSwingAmount);
-            rotateAngleX(frontRightFoot, 0.2f * globalSpeed, 1.2f * globalLegDegree, false, -1.2f + oppositeOffset, -1.2f, limbSwing, limbSwingAmount);
+        /*
+        if (entityIn.isInWater() || entityIn.isInLava()) {
+            rotateAngleX(tail, 0.2f * globalSpeed, 0.1f * 0.5f, false, 0, -0.5f, limbSwing, limbSwingAmount);
 
-            rotateAngleX(backLeftLeg, 0.2f * globalSpeed, 0.9f * globalLegDegree, false, 0.85f - offsetDifference, 0.55f, limbSwing, limbSwingAmount);
-            rotateAngleX(backLeftThigh, 0.2f * globalSpeed, 0.7f * globalLegDegree, false, -0.5f - offsetDifference, -1.5f, limbSwing, limbSwingAmount);
-            rotateAngleX(backLeftFoot, 0.2f * globalSpeed, 1.2f * globalLegDegree, false, -1.2f - offsetDifference, -1.2f, limbSwing, limbSwingAmount);
+            rotateAngleX(neck, 0.2f * globalSpeed, 0.4f * globalLegDegree * 0.5f, false, 0, 0, limbSwing, limbSwingAmount);
+            rotateAngleX(head, 0.2f * globalSpeed, 0.4f * globalLegDegree * 0.5f, true, 0, 0, limbSwing, limbSwingAmount);
 
-            rotateAngleX(backRightLeg, 0.2f * globalSpeed, 0.9f * globalLegDegree, false, 0.85f - offsetDifference + oppositeOffset, 0.55f, limbSwing, limbSwingAmount);
-            rotateAngleX(backRightThigh, 0.2f * globalSpeed, 0.7f * globalLegDegree, false, -0.5f - offsetDifference + oppositeOffset, -1.5f, limbSwing, limbSwingAmount);
-            rotateAngleX(backRightFoot, 0.2f * globalSpeed, 1.2f * globalLegDegree, false, -1.2f - offsetDifference + oppositeOffset, -1.2f, limbSwing, limbSwingAmount);
+            rotateAngleX(frontLeftLeg, 0.2f * globalSpeed, 0.9f * globalLegDegree * 0.5f, false, 0.85f, 0.55f, limbSwing, limbSwingAmount);
+            rotateAngleX(frontLeftThigh, 0.2f * globalSpeed, 0.7f * globalLegDegree * 0.5f, false, -0.5f, -1.5f, limbSwing, limbSwingAmount);
+            rotateAngleX(frontLeftFoot, 0.2f * globalSpeed, 1.2f * globalLegDegree * 0.5f, false, -1.2f, -1.2f, limbSwing, limbSwingAmount);
+
+            rotateAngleX(frontRightLeg, 0.2f * globalSpeed, 0.9f * globalLegDegree * 0.5f, false, 0.85f + oppositeOffset, 0.55f, limbSwing, limbSwingAmount);
+            rotateAngleX(frontRightThigh, 0.2f * globalSpeed, 0.7f * globalLegDegree * 0.5f, false, -0.5f + oppositeOffset, -1.5f, limbSwing, limbSwingAmount);
+            rotateAngleX(frontRightFoot, 0.2f * globalSpeed, 1.2f * globalLegDegree * 0.5f, false, -1.2f + oppositeOffset, -1.2f, limbSwing, limbSwingAmount);
+
+            rotateAngleX(backLeftLeg, 0.2f * globalSpeed, 0.9f * globalLegDegree * 0.5f, false, 0.85f - offsetDifference, 0.55f, limbSwing, limbSwingAmount);
+            rotateAngleX(backLeftThigh, 0.2f * globalSpeed, 0.7f * globalLegDegree * 0.5f, false, -0.5f - offsetDifference, -1.5f, limbSwing, limbSwingAmount);
+            rotateAngleX(backLeftFoot, 0.2f * globalSpeed, 1.2f * globalLegDegree * 0.5f, false, -1.2f - offsetDifference, -1.2f, limbSwing, limbSwingAmount);
+
+            rotateAngleX(backRightLeg, 0.2f * globalSpeed, 0.9f * globalLegDegree * 0.5f, false, 0.85f - offsetDifference + oppositeOffset, 0.55f, limbSwing, limbSwingAmount);
+            rotateAngleX(backRightThigh, 0.2f * globalSpeed, 0.7f * globalLegDegree * 0.5f, false, -0.5f - offsetDifference + oppositeOffset, -1.5f, limbSwing, limbSwingAmount);
+            rotateAngleX(backRightFoot, 0.2f * globalSpeed, 1.2f * globalLegDegree * 0.5f, false, -1.2f - offsetDifference + oppositeOffset, -1.2f, limbSwing, limbSwingAmount);
         } else {
-            rotateAngleX(tail, 0.2f * globalSpeed, 0.1f * globalLegDegree, false, 0, 0, limbSwing, limbSwingAmount);
 
-            rotateAngleX(neck, 0.2f * globalSpeed, 0.1f * globalLegDegree, false, 0, 0, limbSwing, limbSwingAmount);
-            rotateAngleX(head, 0.2f * globalSpeed, 0.1f * globalLegDegree, true, 0, 0, limbSwing, limbSwingAmount);
+            rotateAngleX(tail, 0.2f * globalSpeed, 0.1f * globalLegDegree * 0.5f, false, 0, 0, limbSwing, limbSwingAmount);
 
-            rotateAngleX(frontLeftLeg, 0.2f * globalSpeed, 0.5f * globalLegDegree, false, 0.85f, 0.3f, limbSwing, limbSwingAmount);
-            rotateAngleX(frontLeftThigh, 0.2f * globalSpeed, 0.5f * globalLegDegree, false, -0.5f, -0.5f, limbSwing, limbSwingAmount);
-            rotateAngleX(frontLeftTibia, 0.2f * globalSpeed, 0.7f * globalLegDegree, false, -1.3f, -0.7f, limbSwing, limbSwingAmount);
-            rotateAngleX(frontLeftFoot, 0.2f * globalSpeed, 0.4f * globalLegDegree, false, -1.6f, -0.4f, limbSwing, limbSwingAmount);
+            rotateAngleX(neck, 0.2f * globalSpeed, 0.1f * globalLegDegree * 0.5f, false, 0, 0, limbSwing, limbSwingAmount);
+            rotateAngleX(head, 0.2f * globalSpeed, 0.1f * globalLegDegree * 0.5f, true, 0, 0, limbSwing, limbSwingAmount);
 
-            rotateAngleX(frontRightLeg, 0.2f * globalSpeed, 0.5f * globalLegDegree, false, 0.85f + oppositeOffset, 0.3f, limbSwing, limbSwingAmount);
-            rotateAngleX(frontRightThigh, 0.2f * globalSpeed, 0.5f * globalLegDegree, false, -0.5f + oppositeOffset, -0.5f, limbSwing, limbSwingAmount);
-            rotateAngleX(frontRightTibia, 0.2f * globalSpeed, 0.7f * globalLegDegree, false, -1.3f + oppositeOffset, -0.7f, limbSwing, limbSwingAmount);
-            rotateAngleX(frontRightFoot, 0.2f * globalSpeed, 0.4f * globalLegDegree, false, -1.6f + oppositeOffset, -0.4f, limbSwing, limbSwingAmount);
+            rotateAngleX(frontLeftLeg, 0.2f * globalSpeed, 0.5f * globalLegDegree * 0.5f, false, 0.85f, 0.3f, limbSwing, limbSwingAmount);
+            rotateAngleX(frontLeftThigh, 0.2f * globalSpeed, 0.5f * globalLegDegree * 0.5f, false, -0.5f, -0.5f, limbSwing, limbSwingAmount);
+            rotateAngleX(frontLeftTibia, 0.2f * globalSpeed, 0.7f * globalLegDegree * 0.5f, false, -1.3f, -0.7f, limbSwing, limbSwingAmount);
+            rotateAngleX(frontLeftFoot, 0.2f * globalSpeed, 0.4f * globalLegDegree * 0.5f, false, -1.6f, -0.4f, limbSwing, limbSwingAmount);
 
-            rotateAngleX(backLeftLeg, 0.2f * globalSpeed, 0.5f * globalLegDegree, false, 0.85f - offsetDifference, 0.3f, limbSwing, limbSwingAmount);
-            rotateAngleX(backLeftThigh, 0.2f * globalSpeed, 0.5f * globalLegDegree, false, -0.5f - offsetDifference, -0.5f, limbSwing, limbSwingAmount);
-            rotateAngleX(backLeftTibia, 0.2f * globalSpeed, 0.7f * globalLegDegree, false, -1.3f - offsetDifference, -0.7f, limbSwing, limbSwingAmount);
-            rotateAngleX(backLeftFoot, 0.2f * globalSpeed, 0.4f * globalLegDegree, false, -1.6f - offsetDifference, -0.4f, limbSwing, limbSwingAmount);
+            rotateAngleX(frontRightLeg, 0.2f * globalSpeed, 0.5f * globalLegDegree * 0.5f, false, 0.85f + oppositeOffset, 0.3f, limbSwing, limbSwingAmount);
+            rotateAngleX(frontRightThigh, 0.2f * globalSpeed, 0.5f * globalLegDegree * 0.5f, false, -0.5f + oppositeOffset, -0.5f, limbSwing, limbSwingAmount);
+            rotateAngleX(frontRightTibia, 0.2f * globalSpeed, 0.7f * globalLegDegree * 0.5f, false, -1.3f + oppositeOffset, -0.7f, limbSwing, limbSwingAmount);
+            rotateAngleX(frontRightFoot, 0.2f * globalSpeed, 0.4f * globalLegDegree * 0.5f, false, -1.6f + oppositeOffset, -0.4f, limbSwing, limbSwingAmount);
 
-            rotateAngleX(backRightLeg, 0.2f * globalSpeed, 0.5f * globalLegDegree, false, 0.85f + oppositeOffset - offsetDifference, 0.3f, limbSwing, limbSwingAmount);
-            rotateAngleX(backRightThigh, 0.2f * globalSpeed, 0.5f * globalLegDegree, false, -0.5f + oppositeOffset - offsetDifference, -0.5f, limbSwing, limbSwingAmount);
-            rotateAngleX(backRightTibia, 0.2f * globalSpeed, 0.7f * globalLegDegree, false, -1.3f + oppositeOffset - offsetDifference, -0.7f, limbSwing, limbSwingAmount);
-            rotateAngleX(backRightFoot, 0.2f * globalSpeed, 0.4f * globalLegDegree, false, -1.6f + oppositeOffset - offsetDifference, -0.4f, limbSwing, limbSwingAmount);
+            rotateAngleX(backLeftLeg, 0.2f * globalSpeed, 0.5f * globalLegDegree * 0.5f, false, 0.85f - offsetDifference, 0.3f, limbSwing, limbSwingAmount);
+            rotateAngleX(backLeftThigh, 0.2f * globalSpeed, 0.5f * globalLegDegree * 0.5f, false, -0.5f - offsetDifference, -0.5f, limbSwing, limbSwingAmount);
+            rotateAngleX(backLeftTibia, 0.2f * globalSpeed, 0.7f * globalLegDegree * 0.5f, false, -1.3f - offsetDifference, -0.7f, limbSwing, limbSwingAmount);
+            rotateAngleX(backLeftFoot, 0.2f * globalSpeed, 0.4f * globalLegDegree * 0.5f, false, -1.6f - offsetDifference, -0.4f, limbSwing, limbSwingAmount);
+
+            rotateAngleX(backRightLeg, 0.2f * globalSpeed, 0.5f * globalLegDegree * 0.5f, false, 0.85f + oppositeOffset - offsetDifference, 0.3f, limbSwing, limbSwingAmount);
+            rotateAngleX(backRightThigh, 0.2f * globalSpeed, 0.5f * globalLegDegree * 0.5f, false, -0.5f + oppositeOffset - offsetDifference, -0.5f, limbSwing, limbSwingAmount);
+            rotateAngleX(backRightTibia, 0.2f * globalSpeed, 0.7f * globalLegDegree * 0.5f, false, -1.3f + oppositeOffset - offsetDifference, -0.7f, limbSwing, limbSwingAmount);
+            rotateAngleX(backRightFoot, 0.2f * globalSpeed, 0.4f * globalLegDegree * 0.5f, false, -1.6f + oppositeOffset - offsetDifference, -0.4f, limbSwing, limbSwingAmount);
         }
+         */
     }
 
     public void rotateAngleX(ModelRenderer model, float speed, float degree, boolean invert, float offset, float weight, float limbSwing, float limbSwingAmount) {
-        float result = (float) (limbSwingAmount * degree * MathHelper.cos(limbSwing * speed + offset) + weight * limbSwingAmount);
+        float result = degree * MathHelper.cos(limbSwing * speed + offset) + weight * limbSwingAmount;
         model.rotateAngleX = (invert ? -result : result) + initRotation.get(model)[0];
     }
 

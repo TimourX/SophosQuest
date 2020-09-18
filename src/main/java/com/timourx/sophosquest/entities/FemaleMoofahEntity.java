@@ -1,6 +1,8 @@
 package com.timourx.sophosquest.entities;
 
+import com.timourx.sophosquest.SophosQuest;
 import com.timourx.sophosquest.entities.goal.MoofahPanicGoal;
+import com.timourx.sophosquest.entities.goal.MoofahSwimGoal;
 import com.timourx.sophosquest.init.ModEntityTypes;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.*;
@@ -16,6 +18,7 @@ import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
@@ -26,6 +29,7 @@ public class FemaleMoofahEntity extends TameableEntity {
     private int moofahTimer;
     private FemaleMoofahEntity target;
     private LivingEntity attacker;
+    private boolean isRunning;
 
     public FemaleMoofahEntity(EntityType<? extends TameableEntity> type, World worldIn) {
         super(type, worldIn);
@@ -39,13 +43,14 @@ public class FemaleMoofahEntity extends TameableEntity {
 
     @Override
     protected void registerGoals() {
+        /*
         double walkSpeed = 0.5d;
         super.registerGoals();
         this.eatGrassGoal = new EatGrassGoal(this);
-        //this.goalSelector.addGoal(0, new MoofahSwimGoal(this));
-        this.goalSelector.addGoal(0, new SwimGoal(this));
+        this.goalSelector.addGoal(0, new MoofahSwimGoal(this));
+        //this.goalSelector.addGoal(0, new SwimGoal(this));
         //this.goalSelector.addGoal(1, new PanicGoal(this, 1.25D));
-        this.goalSelector.addGoal(1, new MoofahPanicGoal(this, 1.25d));
+        this.goalSelector.addGoal(1, new MoofahPanicGoal(this, 1.25d, (b) -> this.isRunning = b));
         //this.goalSelector.addGoal(2, new SitGoal(this));
         //this.goalSelector.addGoal(2, new FollowOwnerGoal(this, 1.0D, 10.0f, 1.5f, false));
         this.goalSelector.addGoal(3, new BreedGoal(this, walkSpeed));
@@ -56,6 +61,15 @@ public class FemaleMoofahEntity extends TameableEntity {
         this.goalSelector.addGoal(8, new LookAtGoal(this, PlayerEntity.class, 6.0F));
         //this.goalSelector.addGoal(8, new LookAtGoal(this, MaleMoofahEntity.class, 8.0F));
         this.goalSelector.addGoal(9, new LookRandomlyGoal(this));
+         */
+    }
+
+    private void setRunning(boolean isRunning) {
+        this.isRunning = isRunning;
+    }
+
+    public boolean isRunning() {
+        return this.isRunning;
     }
 
     @Override
@@ -87,11 +101,14 @@ public class FemaleMoofahEntity extends TameableEntity {
     public AgeableEntity createChild(AgeableEntity ageable) {
         return ModEntityTypes.FEMALE_MOOFAH.get().create(this.world);
     }
+
+    /*
     @Override
     protected void updateAITasks() {
         this.moofahTimer = this.eatGrassGoal.getEatingGrassTimer();
         super.updateAITasks();
     }
+     */
 
     @Override
     public void livingTick() {
@@ -112,9 +129,11 @@ public class FemaleMoofahEntity extends TameableEntity {
 
     @Override
     public boolean attackEntityFrom(DamageSource source, float amount) {
-        if (source.getTrueSource() instanceof LivingEntity) {
-            this.target = this;
-            this.attacker = (LivingEntity) source.getTrueSource();
+        if (!this.world.isRemote) {
+            if (source.getTrueSource() instanceof LivingEntity) {
+                this.target = this;
+                this.attacker = (LivingEntity) source.getTrueSource();
+            }
         }
         return super.attackEntityFrom(source, amount);
     }

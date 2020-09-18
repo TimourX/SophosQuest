@@ -21,6 +21,10 @@ public class SophosQuest {
     public static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "sophosquest";
 
+    public static void info(Object info) {
+        LOGGER.info(info);
+    }
+
     public SophosQuest() {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);

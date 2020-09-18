@@ -6,11 +6,11 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.Goal;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.IBlockReader;
 
 import javax.annotation.Nullable;
 import java.util.EnumSet;
+import java.util.function.Consumer;
 
 public class MoofahPanicGoal extends Goal {
 
@@ -20,10 +20,12 @@ public class MoofahPanicGoal extends Goal {
     private double randPosY;
     private double randPosZ;
     private BlockPos escapePos;
+    private final Consumer<Boolean> setRunning;
 
-    public MoofahPanicGoal(FemaleMoofahEntity entity, double speed) {
+    public MoofahPanicGoal(FemaleMoofahEntity entity, double speed, Consumer<Boolean> running) {
         this.entity = entity;
         this.speed = speed;
+        this.setRunning = running;
         this.setMutexFlags(EnumSet.of(Flag.MOVE));
     }
 
@@ -41,17 +43,13 @@ public class MoofahPanicGoal extends Goal {
                     return true;
                 }
             }
-            return this.findRandomEscapePosition(entity.getTarget(), entity.getAttacker());
+            return this.findEscapePosition(entity.getTarget() == null ? this.entity : entity.getTarget(), entity.getAttacker() == null ? this.entity.getRevengeTarget() : entity.getAttacker());
         }
     }
 
-    protected boolean findRandomEscapePosition(FemaleMoofahEntity target, LivingEntity attacker) {
+    protected boolean findEscapePosition(FemaleMoofahEntity target, LivingEntity attacker) {
         BlockPos targetPos = new BlockPos(attacker.getPositionVec().x, attacker.getBoundingBox().minY - 0.5000001D, target.getPositionVec().z);
         BlockPos attackerPos = new BlockPos(attacker.getPositionVec().x, attacker.getBoundingBox().minY - 0.5000001D, attacker.getPositionVec().z);
-        double angle = Math.acos(
-                MathHelper.sqrt(Math.pow(targetPos.getX() - attackerPos.getX(), 2d) + Math.pow(0, 2d))
-                        / MathHelper.sqrt(Math.pow(targetPos.getX() - attackerPos.getX(), 2d) + Math.pow(targetPos.getZ() - attackerPos.getZ(), 2d))
-        );
         BlockPos pos = new BlockPos(target.getPosX() + (target.getPosX() - attacker.getPosX()), targetPos.getY(), target.getPosZ() + (target.getPosZ() - attacker.getPosZ()));
         for (int i = 1; i < 10; i++) {
             pos.add(target.getPosX() - attacker.getPosX(), 0, target.getPosZ() - attacker.getPosZ());
@@ -60,6 +58,7 @@ public class MoofahPanicGoal extends Goal {
         this.randPosX = pos.getX();
         this.randPosY = pos.getY();
         this.randPosZ = pos.getZ();
+        setRunning.accept(true);
         return true;
     }
 
@@ -103,5 +102,17 @@ public class MoofahPanicGoal extends Goal {
         }
 
         return blockpos1;
+    }
+
+    @Override
+    public void resetTask() {
+        setRunning.accept(false);
+    }
+
+    @Override
+    public void tick() {
+        if (this.entity.getNavigator().noPath()) {
+            setRunning.accept(false);
+        }
     }
 }
