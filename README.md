@@ -1,6 +1,6 @@
 # SophosQuest
 ----------------
-I present you my first mod, SophosQuest. It's a mod largely inspired by the famous game Monster Hunter Generation Ultimate, but I've greatly mdified the story. I kept some weapons, some items and some Monster Hunter entities.
+I present you my first mod, SophosQuest. It's a mod largely inspired by the famous game Monster Hunter Generation Ultimate, but I've greatly modified the story. I kept some weapons, some items and some Monster Hunter entities.
 
 The goal of the mod is to defeat the Furucaria, a gigantic and devastating monster. To do this you will need the power of the earth to find minerals, and a great deal of knowledge to forge the ultimate sword, the Sophos Blade. To forge it, you'll need to travel through dimensions, escape hostile monsters and defeat bosses.
 
@@ -12,13 +12,13 @@ The goal of the mod is to defeat the Furucaria, a gigantic and devastating monst
 
 - You can make solid tools out of it, but not very effective ones. Stronger but less effective than stone;
 
-- Earth crystal armor is stronger than iron armor, but less strong than diamond armor. It has 5% knockback resistance and the armor is more damaging to the weapons than normal. When you hit with a sword someone wearing an earth crystal helmet, the sword will take more damage. The sword will take even more damage if the person wears full armor. Only earth crystal tools are immune to this;
+- Earth crystal armor is stronger than iron armor, but less strong than diamond armor. It has 5% knockback resistance, and the armor is more damaging to the weapons than normal. When you hit with a sword someone wearing an earth crystal helmet, the sword will take more damage. The sword will take even more damage if the person wears full armor. Only earth crystal tools are immune to this;
 
 - You can make a block of earth crystal with 9 earth crystal;
 
 - The earth crystal ore is found in the overworld, and it is pretty common, but you can't find it very deeply. You get one or two earth crystals when you mine it, and you can smelt it (or blast it) to always get two;
 
-- The abrasive block is a new block that allows you to repair your weapons and tools using neither materials nor experience. You will need an earth crystal block, 2 earth crystals, an anvil and 3 iron ingots to craft it. Just right click on the block and it will decrease the damage to your weapons and tools. By dint of using it, it will turn into a chipped abrasive block, then into a damaged abrasive block, then it will break.
+- The abrasive block is a new block that allows you to repair your weapons and tools using neither materials nor experience. You will need an earth crystal block, 2 earth crystals, an anvil and 3 iron ingots to craft it. Just right click on the block, and it will decrease the damage to your weapons and tools. By dint of using it, it will turn into a chipped abrasive block, then into a damaged abrasive block, then it will break.
 
 ---
 
