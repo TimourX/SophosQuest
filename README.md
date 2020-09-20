@@ -32,6 +32,8 @@ The goal of the mod is to defeat the Furucaria, a gigantic and devastating monst
 ### Moofah:
 - The moofah will be a new entity (in development);
 
+- The moofah fur is a new item that you will use to craft a new magic armor, the moofah fur armor;
+
 - The moofah fur armor is a new dyeable armor, that is less resistant than the leather armor, but it gives the effect of slow falling and resistance when you have the complete set. You will need moofah furs and moofah fleeceballs to craft it;
 
 - The moofah fleeceball is a new block. Craft it with 9 moofah furs;
@@ -46,8 +48,6 @@ The goal of the mod is to defeat the Furucaria, a gigantic and devastating monst
 ## Future Features
 
 - [ ] **Moofah:** This animal (from Monster Hunter universe) is like a mix between a sheep and a llama, with horns (sounds kind of weird). Search on Google, you'll find it;
-
-- [ ] **Moofah Fur:** This item will be used to craft a new magic armor (already added but not yet finished);
 
 - [ ] **Moofah Horn:** This item will be used to craft a new effect (already added but not yet finished);
 
