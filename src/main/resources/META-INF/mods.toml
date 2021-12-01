@@ -1,14 +1,16 @@
 modLoader="javafml" #mandatory
 
-loaderVersion="[31,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+loaderVersion="[36,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
 
 issueTrackerURL="http://my.issue.tracker/" #optional
+
+license="MIT License"
 
 [[mods]] #mandatory
 
 modId="sophosquest" #mandatory
 
-version="1.16.1-1.0.0" #mandatory
+version="1.16.5-1.0.0" #mandatory
 
 displayName="Sophos Quest" #mandatory
 
@@ -36,7 +38,7 @@ I hope you'll enjoy it ;)
     # Does this dependency have to exist - if not, ordering below must be specified
     mandatory=true #mandatory
     # The version range of the dependency
-    versionRange="[31,)" #mandatory
+    versionRange="[36,)" #mandatory
     # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
     ordering="NONE"
     # Side this dependency is applied on - BOTH, CLIENT or SERVER
@@ -45,6 +47,6 @@ I hope you'll enjoy it ;)
 [[dependencies.examplemod]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.15.2]"
+    versionRange="[1.16.5]"
     ordering="NONE"
     side="BOTH"
